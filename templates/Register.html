@@ -1,0 +1,44 @@
+{% extends 'includes/loginpagelayout.html' %}
+
+{% block body %}
+
+
+
+    <div class="mdl-dialog__content" align="center">
+        <h2>Register</h2>
+    </div>
+
+
+    {% from "includes/formhelpers.html" import render_field %}
+    <form method="POST" action="#" align="center">
+
+        <div>
+            {{ render_field(form.firstname)}}
+        </div>
+
+        <div>
+            {{ render_field(form.surname)}}
+        </div>
+
+        <div>
+            {{ render_field(form.emailaddress)}}
+        </div>
+
+        <div>
+            {{ render_field(form.gender)}}
+        </div>
+
+        <div>
+            {{ render_field(form.password)}}
+        </div>
+
+        <div>
+            {{ render_field(form.confirm)}}
+        </div>
+
+        <p>
+            <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Submit">
+        </p>
+    </form>
+
+{% endblock %}

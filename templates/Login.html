@@ -1,0 +1,36 @@
+{% extends 'includes/loginpagelayout.html' %}
+
+{% block body %}
+
+    <div class="mdl-dialog__content" align="center">
+        <h2>Login</h2>
+    </div>
+
+
+    {% if error %}
+        <div>{{ error }}</div>
+    {% endif %}
+
+    <form method="POST" action="#" align="center">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="sample3" name="email" value="{{request.form.emailaddress}}" >
+        <label class="mdl-textfield__label" for="sample3">Email.</label>
+      </div>
+        <br>
+       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="password" id="sample3" name="password" value="{{request.form.password}}">
+        <label class="mdl-textfield__label" for="sample3">Password</label>
+      </div>
+        <p>
+            <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Sign In">
+        </p>
+    </form>
+
+    <div align="center">
+        <p>Don't have a account, click the Register button</p>
+          <button type="reset" onclick="location.href='/register'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+              Register
+           </button>
+    </div>
+
+{% endblock %}

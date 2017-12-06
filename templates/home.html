@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <link rel="stylesheet" href="/styles.css">
+    <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+
+
+        <div class="mdl-dialog__content">
+            <h4>Welcome, {{ session.username }}</h4>
+        </div>
+
+    </div>
+{% endblock %}
